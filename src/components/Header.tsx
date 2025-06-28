@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navigationItems = [
-    // Changed 'Solivita Home Searches' to 'Home Searches'
-    { name: 'Home Searches', href: '#properties' },
-    { name: 'Useful Info', href: '#useful-info' },
-    { name: 'Sold Homes', href: '#properties' },
-    { name: 'Floor Plans', href: '#services' },
-    { name: 'Site Plans', href: '#services' },
-    { name: 'Photos & Videos', href: '#solivita-pics' },
-    { name: 'Our Team', href: '#team' },
-    { name: 'Why We Moved Here', href: '#testimonials' },
+    { name: 'Home Searches', href: '/solivita-home-searches' },
+    { name: 'Useful Info', href: '/#useful-info' },
+    { name: 'Sold Homes', href: '/#properties' },
+    { name: 'Floor Plans', href: '/#services' },
+    { name: 'Site Plans', href: '/#services' },
+    { name: 'Photos & Videos', href: '/#solivita-pics' },
+    { name: 'Our Team', href: '/#team' },
+    { name: 'Why We Moved Here', href: '/#testimonials' },
   ];
 
   const handleSocialClick = (platform: string) => {
     const socialUrls: { [key: string]: string } = {
       Facebook: 'https://www.facebook.com/borchinirealty',
-      Twitter: 'https://twitter.com/borchinirealty', // Keeping twitter.com as it redirects to X
+      Twitter: 'https://twitter.com/borchinirealty',
       LinkedIn: 'https://www.linkedin.com/company/borchini-realty'
     };
 
@@ -32,9 +33,29 @@ const Header = () => {
     window.location.href = 'mailto:sborchini@gmail.com';
   };
 
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('/#')) {
+      // If we're not on the home page, navigate to home first
+      if (location.pathname !== '/') {
+        window.location.href = href;
+      } else {
+        // If we're on the home page, scroll to the section
+        const sectionId = href.substring(2);
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      // Regular navigation
+      window.location.href = href;
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      {/* New Top Black Bar */}
+      {/* Top Black Bar */}
       <div className="bg-black text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           {/* Email on Left */}
@@ -51,7 +72,7 @@ const Header = () => {
 
           {/* Social Media Icons on Right */}
           <div className="flex items-center space-x-4">
-            {/* Facebook - Using path from Footer */}
+            {/* Facebook */}
             <button
               onClick={() => handleSocialClick('Facebook')}
               className="text-white hover:text-gray-300 transition-colors"
@@ -61,7 +82,7 @@ const Header = () => {
                 <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.815c-3.238 0-4.185 1.237-4.185 4.532v2.468z"/>
               </svg>
             </button>
-            {/* X.com (formerly Twitter) - Using Image */}
+            {/* X.com (formerly Twitter) */}
             <button
               onClick={() => handleSocialClick('Twitter')}
               className="text-white hover:opacity-80 transition-opacity"
@@ -70,10 +91,10 @@ const Header = () => {
               <img
                 src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png"
                 alt="X.com (formerly Twitter) logo"
-                className="w-4 h-4 filter invert" // Invert filter to make black logo white on black background
+                className="w-4 h-4 filter invert"
               />
             </button>
-            {/* LinkedIn - Using path from Footer */}
+            {/* LinkedIn */}
             <button
               onClick={() => handleSocialClick('LinkedIn')}
               className="text-white hover:text-gray-300 transition-colors"
@@ -90,9 +111,9 @@ const Header = () => {
       {/* Main header */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - Links to #home */}
+          {/* Logo - Links to home */}
           <div className="flex items-center">
-            <a href="#home" aria-label="Borchini Realty - Home">
+            <a href="/" aria-label="Borchini Realty - Home">
               <img
                 src="https://ext.same-assets.com/666394337/2643467082.png"
                 alt="Borchini Realty Logo"
@@ -104,13 +125,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6" role="navigation" aria-label="Main navigation">
             {navigationItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-navy hover:text-teal font-medium text-sm transition-colors"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -132,14 +153,13 @@ const Header = () => {
         {isMobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4" role="navigation" aria-label="Mobile navigation">
             {navigationItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2 text-navy hover:text-teal font-medium text-sm transition-colors"
+                onClick={() => handleNavClick(item.href)}
+                className="block w-full text-left py-2 text-navy hover:text-teal font-medium text-sm transition-colors"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
         )}
