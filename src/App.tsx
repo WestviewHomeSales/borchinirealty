@@ -4,10 +4,13 @@ import Hero from './components/Hero';
 import UsefulInfo from './components/UsefulInfo';
 import ServiceBoxes from './components/ServiceBoxes';
 import StayAndPlay from './components/StayAndPlay';
+import PropertyListings from './components/PropertyListings';
 import SolivitaPics from './components/SolivitaPics';
-// import TeamProfiles from './components/TeamProfiles'; // Removed
+import TeamProfiles from './components/TeamProfiles';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import MortgageCalculator from './components/MortgageCalculator';
+import LiveChat from './components/LiveChat';
 
 function App() {
   return (
@@ -26,22 +29,24 @@ function App() {
         <section id="contact">
           <StayAndPlay />
         </section>
-        {/* Removed the Property Listings section */}
-        {/* <section id="properties">
+        <section id="properties">
           <PropertyListings />
-        </section> */}
+        </section>
         <section id="solivita-pics">
           <SolivitaPics />
         </section>
-        {/* Removed the Team Profiles section */}
-        {/* <section id="team">
+        <section id="team">
           <TeamProfiles />
-        </section> */}
+        </section>
         <section id="testimonials">
           <Testimonials />
         </section>
       </main>
       <Footer />
+      
+      {/* Floating Components */}
+      <MortgageCalculator />
+      <LiveChat />
     </div>
   );
 }
