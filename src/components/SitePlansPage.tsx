@@ -62,11 +62,7 @@ const SitePlansPage = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-navy mb-2">Solivita Sub-Division Site Plans</h2>
-            
-            <p className="text-blue-500 mb-8 text-lg">
-              Solivita Sub-Division Site Plans. Click Individual Sub-Divisions for Maps.
-            </p>
+            <h2 className="text-3xl font-bold text-navy mb-8">Solivita Sub-Division Site Plans</h2>
 
             {/* Two Column Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
