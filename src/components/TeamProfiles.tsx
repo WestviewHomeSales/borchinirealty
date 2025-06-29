@@ -100,12 +100,13 @@ const TeamProfiles = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <div key={member.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-              {/* Profile Image */}
-              <div className="relative h-64 overflow-hidden">
+              {/* Profile Image - Fixed to show full head */}
+              <div className="relative h-64 overflow-hidden bg-gray-100">
                 <img
                   src={member.image}
                   alt={`${member.name} - ${member.title}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  style={{ objectPosition: 'center top' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
