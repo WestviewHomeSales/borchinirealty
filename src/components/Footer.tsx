@@ -7,7 +7,6 @@ const Footer = () => {
     { name: 'Floor Plans', href: '#solivita-pics' },
     { name: 'Our Listings', href: '#properties' },
     { name: 'Our Team', href: '#team' },
-    { name: 'Photos & Videos', href: '#solivita-pics' },
     { name: 'Site Plans', href: '#solivita-pics' },
     { name: 'Sold Homes', href: '#properties' },
     { name: 'Testimonials', href: '#testimonials' },
