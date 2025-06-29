@@ -6,7 +6,7 @@ const Header = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { name: 'Home Searches', href: '/solivita-home-searches' },
+    { name: 'Home Searches', href: '/home-searches' },
     { name: 'Useful Info', href: '/#useful-info' },
     { name: 'Sold Homes', href: '/#properties' },
     { name: 'Floor Plans', href: '/#services' },
