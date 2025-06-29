@@ -128,7 +128,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-navy hover:text-teal font-medium text-sm transition-colors"
+                className="text-navy hover:text-teal font-medium text-base transition-colors"
               >
                 {item.name}
               </button>
@@ -156,7 +156,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left py-2 text-navy hover:text-teal font-medium text-sm transition-colors"
+                className="block w-full text-left py-2 text-navy hover:text-teal font-medium text-base transition-colors"
               >
                 {item.name}
               </button>
