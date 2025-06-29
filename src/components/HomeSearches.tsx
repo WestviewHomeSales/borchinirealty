@@ -97,7 +97,7 @@ const HomeSearches = () => {
   const handleSearchClick = (filter: any, title: string) => {
     // Special handling for "All Homes For Sale" - redirect to external IDX site
     if (filter.type === 'all') {
-      window.open('http://borchinirealty.idxbroker.com/i/all-solivita-homes', '_blank', 'noopener,noreferrer');
+      window.open('https://borchinirealty.idxbroker.com/i/all-solivita-homes', '_blank', 'noopener,noreferrer');
       return;
     }
     
