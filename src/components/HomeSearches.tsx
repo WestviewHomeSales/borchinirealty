@@ -113,6 +113,12 @@ const HomeSearches = () => {
       return;
     }
     
+    // Special handling for "Homes Pending Under Contract" - redirect to external IDX site
+    if (filter.status === 'Pending') {
+      window.open('https://borchinirealty.idxbroker.com/i/pending-under-contract', '_blank', 'noopener,noreferrer');
+      return;
+    }
+    
     if (filter.type === 'price-overview') {
       // Show price overview
       navigate('/solivita-home-searches');
