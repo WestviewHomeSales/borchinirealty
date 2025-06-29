@@ -53,6 +53,11 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Function to check if a menu item is active
+  const isActiveMenuItem = (href: string) => {
+    return location.pathname === href;
+  };
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Black Bar */}
@@ -128,7 +133,11 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-navy hover:text-teal font-medium text-base transition-colors"
+                className={`font-medium text-base transition-colors ${
+                  isActiveMenuItem(item.href) 
+                    ? 'text-blue-500' 
+                    : 'text-navy hover:text-teal'
+                }`}
               >
                 {item.name}
               </button>
@@ -156,7 +165,11 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left py-2 text-navy hover:text-teal font-medium text-base transition-colors"
+                className={`block w-full text-left py-2 font-medium text-base transition-colors ${
+                  isActiveMenuItem(item.href) 
+                    ? 'text-blue-500' 
+                    : 'text-navy hover:text-teal'
+                }`}
               >
                 {item.name}
               </button>
