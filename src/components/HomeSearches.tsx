@@ -95,12 +95,9 @@ const HomeSearches = () => {
   ];
 
   const handleSearchClick = (filter: any, title: string) => {
-    // Navigate to the Solivita Home Searches page with filters
-    const searchParams = new URLSearchParams();
-    
+    // Special handling for "All Homes For Sale" - redirect to external IDX site
     if (filter.type === 'all') {
-      // Show all properties
-      navigate('/solivita-home-searches');
+      window.open('http://borchinirealty.idxbroker.com/i/all-solivita-homes', '_blank', 'noopener,noreferrer');
       return;
     }
     
@@ -109,6 +106,9 @@ const HomeSearches = () => {
       navigate('/solivita-home-searches');
       return;
     }
+    
+    // For other searches, navigate to the Solivita Home Searches page with filters
+    const searchParams = new URLSearchParams();
     
     if (filter.priceRange) {
       searchParams.set('priceRange', filter.priceRange);
