@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Solivita Home Searches', href: '#properties' },
+    { name: 'Home Search', href: '#properties' },
     { name: 'About Us', href: '/about-us' },
     { name: 'Floor Plans', href: '#solivita-pics' },
     { name: 'Our Listings', href: '#properties' },
