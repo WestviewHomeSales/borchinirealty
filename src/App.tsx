@@ -19,6 +19,7 @@ import FloorPlansPage from './components/FloorPlansPage';
 import SitePlansPage from './components/SitePlansPage';
 import VideosPage from './components/VideosPage';
 import OurTeamPage from './components/OurTeamPage';
+import WhySolivitaPage from './components/WhySolivitaPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -63,6 +64,7 @@ function App() {
             <Route path="/site-plans" element={<SitePlansPage />} />
             <Route path="/videos" element={<VideosPage />} />
             <Route path="/our-team" element={<OurTeamPage />} />
+            <Route path="/why-solivita" element={<WhySolivitaPage />} />
           </Routes>
         </main>
         <Footer />
