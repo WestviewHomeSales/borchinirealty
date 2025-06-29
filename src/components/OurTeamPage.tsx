@@ -68,7 +68,7 @@ For Cherie living & working here in Solivita, has been a blessing!! She would lo
       title: 'Realtor',
       phone: '863-669-7559',
       email: 'dgpautz@gmail.com',
-      image: 'https://ext.same-assets.com/666394337/2170139032.jpeg',
+      image: '/dale_pautz.jpg',
       bio: `Dale was born and raised in Two Rivers, Wisconsin. He moved to Florida in 1987 to pursue a career in Law Enforcement. He retired in 2013.
 
 He is married to Tammy, and they have two children and three grandchildren. They feel blessed to be living in a wonderful community like Solivita.
