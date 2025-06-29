@@ -8,7 +8,6 @@ const Footer = () => {
     { name: 'Our Listings', href: '#properties' },
     { name: 'Our Team', href: '#team' },
     { name: 'Photos & Videos', href: '#solivita-pics' },
-    { name: 'Site Map', href: '/site-map' },
     { name: 'Site Plans', href: '#solivita-pics' },
     { name: 'Sold Homes', href: '#properties' },
     { name: 'Testimonials', href: '#testimonials' },
@@ -76,7 +75,7 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4">QUICK LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(0, 7).map((link) => (
+                {quickLinks.slice(0, 6).map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('#') ? (
                       <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
@@ -100,7 +99,7 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4 opacity-0">LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(7).map((link) => (
+                {quickLinks.slice(6).map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('#') ? (
                       <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
