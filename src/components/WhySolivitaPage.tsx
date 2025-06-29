@@ -81,7 +81,7 @@ const WhySolivitaPage = () => {
       description: 'Play on professionally designed courses right in your backyard'
     },
     {
-      icon: '🎾',
+      icon: '🏓',
       title: '17 Pickleball Courts',
       description: 'Join the fastest-growing sport with top-notch facilities and leagues'
     },
