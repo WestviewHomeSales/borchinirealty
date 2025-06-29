@@ -53,10 +53,6 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // Split navigation items into two rows
-  const firstRow = navigationItems.slice(0, 4);
-  const secondRow = navigationItems.slice(4);
-
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Black Bar */}
@@ -113,7 +109,7 @@ const Header = () => {
       </div>
 
       {/* Main header */}
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Links to home */}
           <div className="flex items-center">
@@ -126,35 +122,17 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Desktop Navigation - Two Lines */}
-          <nav className="hidden lg:block" role="navigation" aria-label="Main navigation">
-            <div className="flex flex-col items-center space-y-3">
-              {/* First Row */}
-              <div className="flex items-center space-x-8">
-                {firstRow.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => handleNavClick(item.href)}
-                    className="text-navy hover:text-teal font-medium text-lg transition-colors"
-                  >
-                    {item.name}
-                  </button>
-                ))}
-              </div>
-              
-              {/* Second Row */}
-              <div className="flex items-center space-x-8">
-                {secondRow.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => handleNavClick(item.href)}
-                    className="text-navy hover:text-teal font-medium text-lg transition-colors"
-                  >
-                    {item.name}
-                  </button>
-                ))}
-              </div>
-            </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-6" role="navigation" aria-label="Main navigation">
+            {navigationItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => handleNavClick(item.href)}
+                className="text-navy hover:text-teal font-medium text-sm transition-colors"
+              >
+                {item.name}
+              </button>
+            ))}
           </nav>
 
           {/* Mobile menu button */}
@@ -178,7 +156,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left py-3 text-navy hover:text-teal font-medium text-lg transition-colors"
+                className="block w-full text-left py-2 text-navy hover:text-teal font-medium text-sm transition-colors"
               >
                 {item.name}
               </button>
