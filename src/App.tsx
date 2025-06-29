@@ -18,6 +18,7 @@ import SoldHomesPage from './components/SoldHomesPage';
 import FloorPlansPage from './components/FloorPlansPage';
 import SitePlansPage from './components/SitePlansPage';
 import VideosPage from './components/VideosPage';
+import OurTeamPage from './components/OurTeamPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -61,6 +62,7 @@ function App() {
             <Route path="/floor-plans" element={<FloorPlansPage />} />
             <Route path="/site-plans" element={<SitePlansPage />} />
             <Route path="/videos" element={<VideosPage />} />
+            <Route path="/our-team" element={<OurTeamPage />} />
           </Routes>
         </main>
         <Footer />
