@@ -91,7 +91,7 @@ const HomeSearches = () => {
     
     // Special handling for "Waterfront Homes" - redirect to external IDX site
     if (filter.features && filter.features.includes('Waterfront')) {
-      window.open('http://borchinirealty.idxbroker.com/i/waterfront-homes', '_blank', 'noopener,noreferrer');
+      window.open('https://borchinirealty.idxbroker.com/i/waterfront-homes', '_blank', 'noopener,noreferrer');
       return;
     }
     
