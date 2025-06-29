@@ -45,12 +45,6 @@ const HomeSearches = () => {
 
   const priceRanges = [
     {
-      id: 'price-all',
-      title: 'Homes For Sale By Price',
-      icon: '🏠',
-      filter: { type: 'price-overview' }
-    },
-    {
       id: 'price-0-200',
       title: '$0-$200,000',
       icon: '🏠',
@@ -146,12 +140,6 @@ const HomeSearches = () => {
     // Special handling for "$500,000+" - redirect to external IDX site
     if (filter.priceRange === '500000+') {
       window.open('https://borchinirealty.idxbroker.com/i/500000-1000000', '_blank', 'noopener,noreferrer');
-      return;
-    }
-    
-    if (filter.type === 'price-overview') {
-      // Show price overview
-      navigate('/solivita-home-searches');
       return;
     }
     
