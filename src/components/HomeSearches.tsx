@@ -9,42 +9,36 @@ const HomeSearches = () => {
       id: 'all-homes',
       title: 'All Homes For Sale',
       icon: '🏠',
-      description: 'Browse all available properties in Solivita',
       filter: { type: 'all' }
     },
     {
       id: 'waterfront',
       title: 'Waterfront Homes',
       icon: '🏠',
-      description: 'Properties with water views and waterfront access',
       filter: { features: ['Waterfront'] }
     },
     {
       id: 'golf-course',
       title: 'Golf Course Homes',
       icon: '🏠',
-      description: 'Homes with beautiful golf course views',
       filter: { features: ['Golf Course View'] }
     },
     {
       id: 'conservation',
       title: 'Conservation View Homes',
       icon: '🏠',
-      description: 'Properties backing to conservation areas',
       filter: { features: ['Conservation View'] }
     },
     {
       id: 'pool-homes',
       title: 'Pool Homes',
       icon: '🏠',
-      description: 'Homes with private swimming pools',
       filter: { features: ['Pool'] }
     },
     {
       id: 'pending',
       title: 'Homes Pending Under Contract',
       icon: '🏠',
-      description: 'Properties currently under contract',
       filter: { status: 'Pending' }
     }
   ];
@@ -54,42 +48,36 @@ const HomeSearches = () => {
       id: 'price-all',
       title: 'Homes For Sale By Price',
       icon: '🏠',
-      description: 'Browse homes by price range',
       filter: { type: 'price-overview' }
     },
     {
       id: 'price-0-200',
       title: '$0-$200,000',
       icon: '🏠',
-      description: 'Affordable homes under $200K',
       filter: { priceRange: '0-200000' }
     },
     {
       id: 'price-200-300',
       title: '$200,000-$300,000',
       icon: '🏠',
-      description: 'Mid-range homes $200K-$300K',
       filter: { priceRange: '200000-300000' }
     },
     {
       id: 'price-300-400',
       title: '$300,000-$400,000',
       icon: '🏠',
-      description: 'Premium homes $300K-$400K',
       filter: { priceRange: '300000-400000' }
     },
     {
       id: 'price-400-500',
       title: '$400,000-$500,000',
       icon: '🏠',
-      description: 'Luxury homes $400K-$500K',
       filter: { priceRange: '400000-500000' }
     },
     {
       id: 'price-500-plus',
       title: '$500,000 +',
       icon: '🏠',
-      description: 'Ultra-luxury homes over $500K',
       filter: { priceRange: '500000+' }
     }
   ];
@@ -163,9 +151,6 @@ const HomeSearches = () => {
                     <span className="text-yellow-400 mr-3 text-xl">{category.icon}</span>
                     <div className="flex-1">
                       <div className="font-bold">{category.title}</div>
-                      <div className="text-sm text-blue-100 opacity-90 group-hover:opacity-100">
-                        {category.description}
-                      </div>
                     </div>
                     <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 5l7 7-7 7"/>
@@ -188,9 +173,6 @@ const HomeSearches = () => {
                     <span className="text-yellow-400 mr-3 text-xl">{range.icon}</span>
                     <div className="flex-1">
                       <div className="font-bold">{range.title}</div>
-                      <div className="text-sm text-blue-100 opacity-90 group-hover:opacity-100">
-                        {range.description}
-                      </div>
                     </div>
                     <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 5l7 7-7 7"/>
