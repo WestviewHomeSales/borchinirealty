@@ -224,12 +224,6 @@ const HomeSearches = () => {
               >
                 Email Us Today
               </button>
-              <button
-                onClick={() => navigate('/solivita-home-searches')}
-                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-all"
-              >
-                Advanced Search
-              </button>
             </div>
           </div>
         </div>
