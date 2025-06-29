@@ -11,7 +11,7 @@ const Header = () => {
     { name: 'Sold Homes', href: '/sold-homes' },
     { name: 'Floor Plans', href: '/floor-plans' },
     { name: 'Site Plans', href: '/site-plans' },
-    { name: 'Photos & Videos', href: '/videos' },
+    { name: 'Videos', href: '/videos' },
     { name: 'Our Team', href: '/#team' },
     { name: 'Why We Moved Here', href: '/#testimonials' },
   ];
