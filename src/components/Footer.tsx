@@ -9,7 +9,7 @@ const Footer = () => {
     { name: 'Our Team', href: '#team' },
     { name: 'Site Plans', href: '#solivita-pics' },
     { name: 'Sold', href: '#properties' },
-    { name: 'Useful Information', href: '#useful-info' },
+    { name: 'Useful Info.', href: '#useful-info' },
     { name: 'Videos', href: '#solivita-pics' },
     { name: 'Why Solivita', href: '#testimonials' }
   ];
