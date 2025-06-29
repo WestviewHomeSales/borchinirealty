@@ -14,6 +14,7 @@ import MortgageCalculator from './components/MortgageCalculator';
 import LiveChat from './components/LiveChat';
 import SolivitaHomeSearches from './components/SolivitaHomeSearches';
 import HomeSearches from './components/HomeSearches';
+import UsefulInfoPage from './components/UsefulInfoPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -55,6 +56,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/home-searches" element={<HomeSearches />} />
             <Route path="/solivita-home-searches" element={<SolivitaHomeSearches />} />
+            <Route path="/useful-info" element={<UsefulInfoPage />} />
           </Routes>
         </main>
         <Footer />
