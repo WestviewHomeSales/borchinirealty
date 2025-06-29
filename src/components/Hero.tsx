@@ -26,6 +26,15 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  // Removed nextSlide and prevSlide functions as they are no longer needed for button clicks
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % slides.length);
+  // };
+
+  // const prevSlide = () => {
+  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  // };
+
   return (
     <section className="relative h-[600px] overflow-hidden">
       {/* Image Slider */}
@@ -49,21 +58,32 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
+      {/* Removed Navigation arrows */}
+      {/*
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all"
+        aria-label="Previous slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all"
+        aria-label="Next slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      */}
+
       {/* Content overlay */}
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="text-white max-w-4xl px-4">
-          {/* Borchini Realty Logo with transparent background */}
-          <div className="mb-8">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
-              alt="Borchini Realty Logo"
-              className="h-32 w-auto mx-auto drop-shadow-2xl"
-              style={{
-                background: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='150' r='120' fill='none' stroke='%232563eb' stroke-width='8'/%3E%3Ccircle cx='160' cy='120' r='35' fill='%23fbbf24'/%3E%3Cpath d='M200 80 L220 140 L200 200 L180 140 Z' fill='%2316a34a'/%3E%3Cpath d='M160 140 L200 160 L240 140 L220 180 L180 180 Z' fill='%2316a34a'/%3E%3Cpath d='M200 200 L210 220 L200 240 L190 220 Z' fill='%23a3a3a3'/%3E%3Cpath d='M80 250 Q200 230 320 250 Q300 270 200 280 Q100 270 80 250' fill='%232563eb'/%3E%3Cpath d='M90 260 Q200 240 310 260 Q290 280 200 290 Q110 280 90 260' fill='%232563eb'/%3E%3Cpath d='M100 270 Q200 250 300 270 Q280 290 200 300 Q120 290 100 270' fill='%232563eb'/%3E%3Cpath d='M110 280 Q200 260 290 280 Q270 300 200 310 Q130 300 110 280' fill='%2316a34a'/%3E%3Cpath d='M120 290 Q200 270 280 290 Q260 310 200 320 Q140 310 120 290' fill='%2316a34a'/%3E%3Ctext x='200' y='360' text-anchor='middle' font-family='Arial, sans-serif' font-size='32' font-weight='bold' fill='%2316a34a'%3EBorchini Realty%3C/text%3E%3C/svg%3E") center/contain no-repeat`
-              }}
-            />
-          </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-shadow-lg">
             We LIVE here!<br />We SELL here!
           </h1>
