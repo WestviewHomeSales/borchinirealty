@@ -101,6 +101,12 @@ const HomeSearches = () => {
       return;
     }
     
+    // Special handling for "Conservation View Homes" - redirect to external IDX site
+    if (filter.features && filter.features.includes('Conservation View')) {
+      window.open('https://borchinirealty.idxbroker.com/i/conservation-view-homes-for-sale', '_blank', 'noopener,noreferrer');
+      return;
+    }
+    
     if (filter.type === 'price-overview') {
       // Show price overview
       navigate('/solivita-home-searches');
