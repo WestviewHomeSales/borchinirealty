@@ -12,7 +12,7 @@ const Footer = () => {
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Useful Information', href: '#useful-info' },
     { name: 'Videos', href: '#solivita-pics' },
-    { name: 'Why We Moved Here', href: '#testimonials' }
+    { name: 'Why Solivita', href: '#testimonials' }
   ];
 
   const handleSocialClick = (platform: string) => {
