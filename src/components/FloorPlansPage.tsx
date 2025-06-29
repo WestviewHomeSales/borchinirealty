@@ -262,31 +262,7 @@ const FloorPlansPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredPlans.map((plan) => (
               <div key={plan.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
-                {/* Floor Plan Image Placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-blue-200 cursor-pointer" onClick={() => handleFloorPlanClick(plan)}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <svg className="w-16 h-16 mx-auto mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                      </svg>
-                      <p className="text-blue-600 font-medium">Floor Plan</p>
-                    </div>
-                  </div>
-                  
-                  {/* Series Badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-navy text-white px-2 py-1 rounded-full text-xs font-medium">
-                      {plan.series}
-                    </span>
-                  </div>
-
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="text-white font-semibold">View Details</span>
-                  </div>
-                </div>
-
-                {/* Floor Plan Details */}
+                {/* Floor Plan Details - Simplified Layout */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-navy mb-2">{plan.name}</h3>
                   <p className="text-teal font-semibold mb-4">{plan.series} Series</p>
