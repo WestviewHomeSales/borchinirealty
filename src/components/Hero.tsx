@@ -26,6 +26,15 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  // Removed nextSlide and prevSlide functions as they are no longer needed for button clicks
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % slides.length);
+  // };
+
+  // const prevSlide = () => {
+  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  // };
+
   return (
     <section className="relative h-[600px] overflow-hidden">
       {/* Image Slider */}
@@ -49,18 +58,32 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
+      {/* Removed Navigation arrows */}
+      {/*
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all"
+        aria-label="Previous slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all"
+        aria-label="Next slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      */}
+
       {/* Content overlay */}
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="text-white max-w-4xl px-4">
-          {/* Borchini Realty Logo */}
-          <div className="mb-8">
-            <img
-              src="/borchini-logo.png"
-              alt="Borchini Realty Logo"
-              className="h-32 w-auto mx-auto drop-shadow-lg"
-            />
-          </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-shadow-lg">
             We LIVE here!<br />We SELL here!
           </h1>
