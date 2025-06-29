@@ -293,7 +293,7 @@ const WhySolivitaPage = () => {
                 Email Us Today
               </button>
               <button
-                onClick={() => window.location.href = '/home-searches'}
+                onClick={() => window.open('https://borchinirealty.idxbroker.com/i/all-solivita-homes', '_blank')}
                 className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all"
               >
                 View Available Homes
