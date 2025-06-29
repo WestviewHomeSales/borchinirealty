@@ -2,22 +2,20 @@ import React from 'react';
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Home Search', href: '#properties' },
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Floor Plans', href: '#solivita-pics' },
-    { name: 'Our Listings', href: '#properties' },
-    { name: 'Our Team', href: '#team' },
-    { name: 'Site Plans', href: '#solivita-pics' },
-    { name: 'Sold', href: '#properties' },
-    { name: 'Useful Info.', href: '#useful-info' },
-    { name: 'Videos', href: '#solivita-pics' },
-    { name: 'Why Solivita', href: '#testimonials' }
+    { name: 'Home Search', href: '/home-searches' },
+    { name: 'Sold', href: '/sold-homes' },
+    { name: 'Useful Info.', href: '/useful-info' },
+    { name: 'Floor Plans', href: '/floor-plans' },
+    { name: 'Site Plans', href: '/site-plans' },
+    { name: 'Videos', href: '/videos' },
+    { name: 'Our Team', href: '/our-team' },
+    { name: 'Why Solivita', href: '/why-solivita' }
   ];
 
   const handleSocialClick = (platform: string) => {
     const socialUrls: { [key: string]: string } = {
       Facebook: 'https://www.facebook.com/borchinirealty',
-      Twitter: 'https://twitter.com/borchinirealty', // Keeping twitter.com as it redirects to X
+      Twitter: 'https://twitter.com/borchinirealty',
       LinkedIn: 'https://www.linkedin.com/company/borchini-realty'
     };
 
@@ -34,9 +32,8 @@ const Footer = () => {
   const handleLinkClick = (href: string, name: string) => {
     if (href.startsWith('http') || href.startsWith('/')) {
       if (href.startsWith('/')) {
-        // Internal page - would navigate in a real app
-        console.log(`Navigate to: ${name} (${href})`);
-        alert(`This would navigate to: ${name}\nURL: ${href}`);
+        // Internal page - navigate directly
+        window.location.href = href;
       } else {
         // External link
         window.open(href, '_blank', 'noopener,noreferrer');
@@ -77,21 +74,15 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4">QUICK LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(0, 5).map((link) => (
+                {quickLinks.slice(0, 4).map((link) => (
                   <li key={link.name}>
-                    {link.href.startsWith('#') ? (
-                      <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
-                        {link.name}
-                      </a>
-                    ) : (
-                      <button
-                        onClick={() => handleLinkClick(link.href, link.name)}
-                        className="text-gray-300 hover:text-cream transition-colors text-sm text-left"
-                        aria-label={`Navigate to ${link.name}`}
-                      >
-                        {link.name}
-                      </button>
-                    )}
+                    <button
+                      onClick={() => handleLinkClick(link.href, link.name)}
+                      className="text-gray-300 hover:text-cream transition-colors text-sm text-left"
+                      aria-label={`Navigate to ${link.name}`}
+                    >
+                      {link.name}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -101,21 +92,15 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4 opacity-0">LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(5).map((link) => (
+                {quickLinks.slice(4).map((link) => (
                   <li key={link.name}>
-                    {link.href.startsWith('#') ? (
-                      <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
-                        {link.name}
-                      </a>
-                    ) : (
-                      <button
-                        onClick={() => handleLinkClick(link.href, link.name)}
-                        className="text-gray-300 hover:text-cream transition-colors text-sm text-left"
-                        aria-label={`Navigate to ${link.name}`}
-                      >
-                        {link.name}
-                      </button>
-                    )}
+                    <button
+                      onClick={() => handleLinkClick(link.href, link.name)}
+                      className="text-gray-300 hover:text-cream transition-colors text-sm text-left"
+                      aria-label={`Navigate to ${link.name}`}
+                    >
+                      {link.name}
+                    </button>
                   </li>
                 ))}
               </ul>
