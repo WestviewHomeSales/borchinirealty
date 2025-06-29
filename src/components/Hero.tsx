@@ -52,13 +52,39 @@ const Hero = () => {
       {/* Content overlay */}
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="text-white max-w-4xl px-4">
-          {/* Borchini Realty Logo */}
+          {/* Borchini Realty Logo - Using inline SVG for transparency */}
           <div className="mb-8">
-            <img
-              src="/borchini-logo.png"
-              alt="Borchini Realty Logo"
-              className="h-32 w-auto mx-auto drop-shadow-2xl"
-            />
+            <svg 
+              className="h-32 w-auto mx-auto drop-shadow-2xl" 
+              viewBox="0 0 400 400" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Circular border */}
+              <circle cx="200" cy="200" r="190" fill="none" stroke="#1e3a8a" strokeWidth="20"/>
+              
+              {/* Sun */}
+              <circle cx="160" cy="120" r="50" fill="#fbbf24"/>
+              
+              {/* Palm tree trunk */}
+              <path d="M200 180 Q205 220 200 280 Q195 320 200 360" fill="#92400e" stroke="#92400e" strokeWidth="8"/>
+              
+              {/* Palm fronds */}
+              <path d="M200 180 Q150 150 120 140 Q140 160 180 170" fill="#16a34a"/>
+              <path d="M200 180 Q250 150 280 140 Q260 160 220 170" fill="#16a34a"/>
+              <path d="M200 180 Q180 130 170 100 Q190 120 200 160" fill="#16a34a"/>
+              <path d="M200 180 Q220 130 230 100 Q210 120 200 160" fill="#16a34a"/>
+              <path d="M200 180 Q160 200 130 220 Q150 200 190 190" fill="#16a34a"/>
+              <path d="M200 180 Q240 200 270 220 Q250 200 210 190" fill="#16a34a"/>
+              
+              {/* Water waves - blue */}
+              <path d="M50 300 Q100 280 150 300 Q200 320 250 300 Q300 280 350 300" fill="none" stroke="#1e40af" strokeWidth="8"/>
+              <path d="M50 320 Q100 300 150 320 Q200 340 250 320 Q300 300 350 320" fill="none" stroke="#1e40af" strokeWidth="8"/>
+              <path d="M50 340 Q100 320 150 340 Q200 360 250 340 Q300 320 350 340" fill="none" stroke="#1e40af" strokeWidth="8"/>
+              
+              {/* Green waves */}
+              <path d="M50 310 Q100 290 150 310 Q200 330 250 310" fill="none" stroke="#16a34a" strokeWidth="6"/>
+              <path d="M50 330 Q100 310 150 330 Q200 350 250 330" fill="none" stroke="#16a34a" strokeWidth="6"/>
+            </svg>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-shadow-lg">
