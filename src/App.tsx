@@ -16,6 +16,7 @@ import HomeSearches from './components/HomeSearches';
 import UsefulInfoPage from './components/UsefulInfoPage';
 import SoldHomesPage from './components/SoldHomesPage';
 import FloorPlansPage from './components/FloorPlansPage';
+import SitePlansPage from './components/SitePlansPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -57,6 +58,7 @@ function App() {
             <Route path="/useful-info" element={<UsefulInfoPage />} />
             <Route path="/sold-homes" element={<SoldHomesPage />} />
             <Route path="/floor-plans" element={<FloorPlansPage />} />
+            <Route path="/site-plans" element={<SitePlansPage />} />
           </Routes>
         </main>
         <Footer />
