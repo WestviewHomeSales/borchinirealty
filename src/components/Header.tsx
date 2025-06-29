@@ -9,7 +9,7 @@ const Header = () => {
     { name: 'Home Searches', href: '/home-searches' },
     { name: 'Useful Info', href: '/useful-info' },
     { name: 'Sold Homes', href: '/sold-homes' },
-    { name: 'Floor Plans', href: '/#services' },
+    { name: 'Floor Plans', href: '/floor-plans' },
     { name: 'Site Plans', href: '/#services' },
     { name: 'Photos & Videos', href: '/#solivita-pics' },
     { name: 'Our Team', href: '/#team' },

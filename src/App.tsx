@@ -16,6 +16,7 @@ import SolivitaHomeSearches from './components/SolivitaHomeSearches';
 import HomeSearches from './components/HomeSearches';
 import UsefulInfoPage from './components/UsefulInfoPage';
 import SoldHomesPage from './components/SoldHomesPage';
+import FloorPlansPage from './components/FloorPlansPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -59,6 +60,7 @@ function App() {
             <Route path="/solivita-home-searches" element={<SolivitaHomeSearches />} />
             <Route path="/useful-info" element={<UsefulInfoPage />} />
             <Route path="/sold-homes" element={<SoldHomesPage />} />
+            <Route path="/floor-plans" element={<FloorPlansPage />} />
           </Routes>
         </main>
         <Footer />
