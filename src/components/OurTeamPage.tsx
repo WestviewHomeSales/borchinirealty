@@ -134,17 +134,17 @@ She was born and raised in Northern Virginia, where she spent 30+ years working 
         </div>
       </div>
 
-      {/* Team Introduction */}
+      {/* Team Introduction - LEFT JUSTIFIED */}
       <div className="bg-cream py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-navy mb-6">We LIVE here and SELL here!</h2>
-            <div className="text-lg text-gray-700 space-y-4">
+            <div className="text-lg text-gray-700 space-y-4 text-left">
               <p>
                 That's important because we know the floor plans, market prices, amenities, the community and the latest information. Year after year we are consistently one of the top sellers and listers in Solivita.
               </p>
               <p>
-                As our testimonials bear out we always go the extra mile for our clients. We assist you from start to finish and beyond. <strong>Established in 2007.</strong>
+                As our testimonials bear out we always go the extra mile for our clients. We assist you from start to finish and beyond. Established in 2007.
               </p>
             </div>
           </div>
