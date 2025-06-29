@@ -26,6 +26,15 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  // Removed nextSlide and prevSlide functions as they are no longer needed for button clicks
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % slides.length);
+  // };
+
+  // const prevSlide = () => {
+  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  // };
+
   return (
     <section className="relative h-[600px] overflow-hidden">
       {/* Image Slider */}
@@ -49,44 +58,32 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
+      {/* Removed Navigation arrows */}
+      {/*
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all"
+        aria-label="Previous slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all"
+        aria-label="Next slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      */}
+
       {/* Content overlay */}
       <div className="absolute inset-0 flex items-center justify-center text-center">
         <div className="text-white max-w-4xl px-4">
-          {/* Borchini Realty Logo - Using inline SVG for transparency */}
-          <div className="mb-8">
-            <svg 
-              className="h-32 w-auto mx-auto drop-shadow-2xl" 
-              viewBox="0 0 400 400" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Circular border */}
-              <circle cx="200" cy="200" r="190" fill="none" stroke="#1e3a8a" strokeWidth="20"/>
-              
-              {/* Sun */}
-              <circle cx="160" cy="120" r="50" fill="#fbbf24"/>
-              
-              {/* Palm tree trunk */}
-              <path d="M200 180 Q205 220 200 280 Q195 320 200 360" fill="#92400e" stroke="#92400e" strokeWidth="8"/>
-              
-              {/* Palm fronds */}
-              <path d="M200 180 Q150 150 120 140 Q140 160 180 170" fill="#16a34a"/>
-              <path d="M200 180 Q250 150 280 140 Q260 160 220 170" fill="#16a34a"/>
-              <path d="M200 180 Q180 130 170 100 Q190 120 200 160" fill="#16a34a"/>
-              <path d="M200 180 Q220 130 230 100 Q210 120 200 160" fill="#16a34a"/>
-              <path d="M200 180 Q160 200 130 220 Q150 200 190 190" fill="#16a34a"/>
-              <path d="M200 180 Q240 200 270 220 Q250 200 210 190" fill="#16a34a"/>
-              
-              {/* Water waves - blue */}
-              <path d="M50 300 Q100 280 150 300 Q200 320 250 300 Q300 280 350 300" fill="none" stroke="#1e40af" strokeWidth="8"/>
-              <path d="M50 320 Q100 300 150 320 Q200 340 250 320 Q300 300 350 320" fill="none" stroke="#1e40af" strokeWidth="8"/>
-              <path d="M50 340 Q100 320 150 340 Q200 360 250 340 Q300 320 350 340" fill="none" stroke="#1e40af" strokeWidth="8"/>
-              
-              {/* Green waves */}
-              <path d="M50 310 Q100 290 150 310 Q200 330 250 310" fill="none" stroke="#16a34a" strokeWidth="6"/>
-              <path d="M50 330 Q100 310 150 330 Q200 350 250 330" fill="none" stroke="#16a34a" strokeWidth="6"/>
-            </svg>
-          </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-shadow-lg">
             We LIVE here!<br />We SELL here!
           </h1>
