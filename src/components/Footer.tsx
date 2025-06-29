@@ -9,7 +9,6 @@ const Footer = () => {
     { name: 'Our Team', href: '#team' },
     { name: 'Site Plans', href: '#solivita-pics' },
     { name: 'Sold', href: '#properties' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Useful Information', href: '#useful-info' },
     { name: 'Videos', href: '#solivita-pics' },
     { name: 'Why Solivita', href: '#testimonials' }
@@ -26,6 +25,10 @@ const Footer = () => {
     if (url) {
       window.open(url, '_blank', 'noopener,noreferrer');
     }
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:sborchini@gmail.com';
   };
 
   const handleLinkClick = (href: string, name: string) => {
@@ -74,7 +77,7 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4">QUICK LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(0, 6).map((link) => (
+                {quickLinks.slice(0, 5).map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('#') ? (
                       <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
@@ -98,7 +101,7 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4 opacity-0">LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(6).map((link) => (
+                {quickLinks.slice(5).map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('#') ? (
                       <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
