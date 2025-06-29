@@ -37,7 +37,7 @@ As a full time realtor, Yamile looks forward to using her passion for real state
       title: 'Broker Associate',
       phone: '203-631-8306',
       email: 'SheilaChor@gmail.com',
-      image: 'https://ext.same-assets.com/666394337/3491598370.jpeg',
+      image: '/sheila_choromanski.jpg',
       bio: `Sheila Choromanski, a Connecticut native is a successful and proven Real Estate agent and Broker (in CT) with 38 years of experience. Having been involved in many clubs and serving on many Boards while living in Connecticut, gave her the ability to connect with buyers and sellers as well as connecting volunteers with philanthropic organizations and events.
 
 She and her husband, Walt have three children. They first owned in Solivita in 2012 (as a place in the sun away from the snow for weeks at a time). Central Florida with its natural beauty, cultural activities, theme park attractions, and favorable tax climate made the decision to establish residency in 2018 an easy one. Solivita, with all its clubs and activities has enriched our lives, making friends with so many neighbors with such interesting backgrounds and talents from around the world. Living here and working here is just "another day in paradise". Selling in Solivita is a passion, not a job.

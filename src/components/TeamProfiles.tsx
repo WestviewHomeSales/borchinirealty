@@ -58,7 +58,7 @@ const TeamProfiles = () => {
       title: 'Realtor',
       phone: '863-669-7559',
       email: 'dgpautz@gmail.com',
-      image: 'https://ext.same-assets.com/666394337/2170139032.jpeg'
+      image: '/dale_pautz.jpg'
     },
     {
       id: 'sheila-choromanski',
@@ -66,7 +66,7 @@ const TeamProfiles = () => {
       title: 'Broker Associate',
       phone: '203-631-8306',
       email: 'SheilaChor@gmail.com',
-      image: 'https://ext.same-assets.com/666394337/3491598370.jpeg'
+      image: '/sheila_choromanski.jpg'
     },
     {
       id: 'heather-hayes',
