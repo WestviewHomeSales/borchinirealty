@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import UsefulInfo from './components/UsefulInfo';
 import ServiceBoxes from './components/ServiceBoxes';
 import StayAndPlay from './components/StayAndPlay';
-import PropertyListings from './components/PropertyListings';
 import SolivitaPics from './components/SolivitaPics';
 import TeamProfiles from './components/TeamProfiles';
 import Testimonials from './components/Testimonials';
@@ -32,9 +31,6 @@ const HomePage = () => (
     </section>
     <section id="contact">
       <StayAndPlay />
-    </section>
-    <section id="properties">
-      <PropertyListings />
     </section>
     <section id="solivita-pics">
       <SolivitaPics />
