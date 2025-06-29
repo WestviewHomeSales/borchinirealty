@@ -2,7 +2,6 @@ import React from 'react';
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Solivita Home Searches', href: '#properties' },
     { name: 'About Us', href: '/about-us' },
     { name: 'Floor Plans', href: '#solivita-pics' },
@@ -77,7 +76,7 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4">QUICK LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(0, 8).map((link) => (
+                {quickLinks.slice(0, 7).map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('#') ? (
                       <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
@@ -101,7 +100,7 @@ const Footer = () => {
             <div>
               <h4 className="text-xl font-bold text-cream mb-4 opacity-0">LINKS</h4>
               <ul className="space-y-2">
-                {quickLinks.slice(8).map((link) => (
+                {quickLinks.slice(7).map((link) => (
                   <li key={link.name}>
                     {link.href.startsWith('#') ? (
                       <a href={link.href} className="text-gray-300 hover:text-cream transition-colors text-sm">
