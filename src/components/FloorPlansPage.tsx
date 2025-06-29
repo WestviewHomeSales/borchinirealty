@@ -172,12 +172,6 @@ const FloorPlansPage = () => {
     alert(`Floor Plan Details:\n\nModel: ${plan.name}\nSeries: ${plan.series}\nBedrooms: ${plan.beds}\nBathrooms: ${plan.baths}\nSquare Feet: ${plan.sqft.toLocaleString()}\n\n${plan.description || 'Contact us for more details about this floor plan.'}`);
   };
 
-  const handleRequestInfo = (plan: FloorPlan) => {
-    const subject = `Floor Plan Information Request - ${plan.name}`;
-    const body = `Hi, I'm interested in learning more about the ${plan.name} floor plan.\n\nModel: ${plan.name}\nSeries: ${plan.series}\nBedrooms: ${plan.beds}\nBathrooms: ${plan.baths}\nSquare Feet: ${plan.sqft.toLocaleString()}\n\nPlease send me additional information including pricing and availability.\n\nThank you!`;
-    window.location.href = `mailto:sborchini@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -305,21 +299,13 @@ const FloorPlansPage = () => {
                     </p>
                   )}
 
-                  {/* Action Buttons */}
-                  <div className="flex gap-2">
-                    <button 
-                      onClick={() => handleFloorPlanClick(plan)}
-                      className="flex-1 bg-navy text-white py-2 px-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-sm"
-                    >
-                      View Plan
-                    </button>
-                    <button 
-                      onClick={() => handleRequestInfo(plan)}
-                      className="flex-1 bg-teal text-white py-2 px-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-sm"
-                    >
-                      Get Info
-                    </button>
-                  </div>
+                  {/* Single Action Button */}
+                  <button 
+                    onClick={() => handleFloorPlanClick(plan)}
+                    className="w-full bg-navy text-white py-2 px-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-sm"
+                  >
+                    View Plan
+                  </button>
                 </div>
               </div>
             ))}
