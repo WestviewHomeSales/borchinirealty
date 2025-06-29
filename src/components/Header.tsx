@@ -13,7 +13,7 @@ const Header = () => {
     { name: 'Site Plans', href: '/site-plans' },
     { name: 'Videos', href: '/videos' },
     { name: 'Our Team', href: '/our-team' },
-    { name: 'About Us', href: '/#testimonials' },
+    { name: 'Why Solivita?', href: '/#testimonials' },
   ];
 
   const handleSocialClick = (platform: string) => {
