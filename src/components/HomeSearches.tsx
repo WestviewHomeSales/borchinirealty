@@ -143,6 +143,12 @@ const HomeSearches = () => {
       return;
     }
     
+    // Special handling for "$500,000+" - redirect to external IDX site
+    if (filter.priceRange === '500000+') {
+      window.open('https://borchinirealty.idxbroker.com/i/500000-1000000', '_blank', 'noopener,noreferrer');
+      return;
+    }
+    
     if (filter.type === 'price-overview') {
       // Show price overview
       navigate('/solivita-home-searches');
