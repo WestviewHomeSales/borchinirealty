@@ -167,10 +167,6 @@ const FloorPlansPage = () => {
       }
     });
 
-  const handleFloorPlanClick = (plan: FloorPlan) => {
-    alert(`Floor Plan Details:\n\nModel: ${plan.name}\nBedrooms: ${plan.beds}\nBathrooms: ${plan.baths}\nSquare Feet: ${plan.sqft.toLocaleString()}\n\nContact us for more details about this floor plan.`);
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -290,13 +286,10 @@ const FloorPlansPage = () => {
                     </div>
                   </div>
 
-                  {/* Single Action Button */}
-                  <button 
-                    onClick={() => handleFloorPlanClick(plan)}
-                    className="w-full bg-navy text-white py-2 px-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-sm"
-                  >
+                  {/* Non-functional Button */}
+                  <div className="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold text-sm text-center cursor-not-allowed">
                     View Plan
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}
