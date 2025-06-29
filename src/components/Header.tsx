@@ -13,7 +13,7 @@ const Header = () => {
     { name: 'Site Plans', href: '/site-plans' },
     { name: 'Videos', href: '/videos' },
     { name: 'Our Team', href: '/#team' },
-    { name: 'Why We Moved Here', href: '/#testimonials' },
+    { name: 'About Us', href: '/#testimonials' },
   ];
 
   const handleSocialClick = (platform: string) => {
