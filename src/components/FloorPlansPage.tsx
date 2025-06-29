@@ -169,7 +169,7 @@ const FloorPlansPage = () => {
     });
 
   const handleFloorPlanClick = (plan: FloorPlan) => {
-    alert(`Floor Plan Details:\n\nModel: ${plan.name}\nSeries: ${plan.series}\nBedrooms: ${plan.beds}\nBathrooms: ${plan.baths}\nSquare Feet: ${plan.sqft.toLocaleString()}\n\n${plan.description || 'Contact us for more details about this floor plan.'}`);
+    alert(`Floor Plan Details:\n\nModel: ${plan.name}\nBedrooms: ${plan.beds}\nBathrooms: ${plan.baths}\nSquare Feet: ${plan.sqft.toLocaleString()}\n\n${plan.description || 'Contact us for more details about this floor plan.'}`);
   };
 
   return (
@@ -258,8 +258,7 @@ const FloorPlansPage = () => {
               <div key={plan.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
                 {/* Floor Plan Details - Simplified Layout */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy mb-2">{plan.name}</h3>
-                  <p className="text-teal font-semibold mb-4">{plan.series} Series</p>
+                  <h3 className="text-xl font-bold text-navy mb-4">{plan.name}</h3>
 
                   {/* Specifications */}
                   <div className="grid grid-cols-3 gap-4 mb-4">
@@ -322,7 +321,6 @@ const FloorPlansPage = () => {
               {floorPlans.slice(0, 4).map((plan) => (
                 <div key={plan.id} className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
                   <h3 className="font-bold text-navy mb-2">{plan.name}</h3>
-                  <p className="text-sm text-teal mb-2">{plan.series} Series</p>
                   <div className="text-sm text-gray-600">
                     {plan.beds} Bed • {plan.baths} Bath • {plan.sqft.toLocaleString()} SF
                   </div>
