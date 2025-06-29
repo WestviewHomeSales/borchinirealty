@@ -284,7 +284,7 @@ She was born and raised in Northern Virginia, where she spent 30+ years working 
                 <div className="text-sm text-gray-600">Solivita Focused</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-navy mb-2">5★</div>
+                <div className="text-3xl font-bold text-navy mb-2">4.9★</div>
                 <div className="text-sm text-gray-600">Client Satisfaction</div>
               </div>
             </div>
