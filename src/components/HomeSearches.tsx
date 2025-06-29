@@ -131,7 +131,7 @@ const HomeSearches = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-navy text-white py-12">
         <div className="container mx-auto px-4">
@@ -204,7 +204,7 @@ const HomeSearches = () => {
       </div>
 
       {/* Additional Search Options */}
-      <div className="bg-light-blue py-12">
+      <div className="bg-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-navy mb-6">Need Help Finding the Perfect Home?</h2>
